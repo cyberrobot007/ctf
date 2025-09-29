@@ -73,7 +73,6 @@ app.get('/a01', (req, res) => {
         <input type="number" name="userId" placeholder="Enter User ID (e.g., 1 or 2)" required>
         <button type="submit">View Profile</button>
       </form>
-      <p>Hint: Only access your own profile!</p>
     </body></html>
   `);
 });
@@ -123,7 +122,6 @@ app.get('/a02', (req, res) => {
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
       </form>
-      <p>Hint: Check browser dev tools or source for hash. Crack it!</p>
       <script>
         console.log('Admin hash: 5f4dcc3b5aa765d61d8327deb882cf99'); // MD5 of 'password'
       </script>
@@ -231,7 +229,7 @@ app.get('/a04', (req, res) => {
         <input type="number" name="amount" placeholder="Amount to transfer (positive to add, negative to withdraw)" step="0.01">
         <button type="submit">Transfer</button>
       </form>
-      <p>Hint: Design flaw allows over-withdrawal. Make balance <=0 for flag.</p>
+ 
     </body></html>
   `);
 });
@@ -269,7 +267,6 @@ app.get('/a05', (req, res) => {
         <input type="password" name="pass" placeholder="Password" required>
         <button type="submit">Login</button>
       </form>
-      <p>Hint: Defaults are often unchanged...</p>
     </body></html>
   `);
 });
@@ -347,7 +344,6 @@ app.get('/a07', (req, res) => {
         <input type="password" name="pass" placeholder="Password (try brute force)" required>
         <button type="submit">Login</button>
       </form>
-      <p>Hint: No rate limiting. Password is 'admin123'.</p>
     </body></html>
   `);
 });
@@ -376,7 +372,6 @@ app.get('/a08', (req, res) => {
         <textarea name="yaml" placeholder="YAML payload e.g. flag: true" rows="5" cols="50"></textarea><br>
         <button type="submit">Load Config</button>
       </form>
-      <p>Hint: Unsafe deserialization via YAML.</p>
     </body></html>
   `);
 });
@@ -407,7 +402,6 @@ app.get('/a09', (req, res) => {
         <input type="hidden" name="transfer" value="initiate">
         <button type="submit">Initiate Transfer</button>
       </form>
-      <p>Hint: Replay the POST request twice to bypass "one-time" check.</p>
     </body></html>
   `);
 });
@@ -443,7 +437,6 @@ app.get('/a10', (req, res) => {
         <input type="url" name="url" placeholder="http://example.com" required>
         <button type="submit">Fetch</button>
       </form>
-      <p>Hint: Try fetching internal resources like http://localhost:3000/internal-flag</p>
     </body></html>
   `);
 });
